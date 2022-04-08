@@ -9,12 +9,39 @@ body {
   color: var(--primary-color);
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
 
 .link {
   text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
 }
 
 .visually-hidden {
@@ -35,6 +62,12 @@ body {
   background-color: #ffffff;
 }
 
+.header-nav{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
 .header-logo,
 .logo {
   font-family: Raleway, sans-serif;
@@ -49,13 +82,39 @@ body {
   color: var(--accent-color);
 }
 
+.nav {
+  margin-left: 40px;
+}
+
+.header-list,
+.header-contacts {
+  display: flex;
+}
+
+.header-contacts {
+  margin-left: auto;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-contacts .header-contact + .header-contact {
+  margin-left: 50px;
+}
+
 .header-link,
 .contact {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
+
 }
 
 .header-link:hover,
@@ -78,9 +137,13 @@ body {
 /* ---------Герой--------- */
 .hiro {
   background-color: #2f303a;
-}
+  padding-top: 200px;
+  padding-bottom: 200px;
+  }
 
 .hiro-title {
+  max-width: 696px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -88,32 +151,59 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+
+  margin: 0 auto;
 }
 
 .hiro-btn {
+  min-width: 200px;
+  padding: 10px 32px;
+  display: block;
+  margin: 30px auto 0 auto;
+  border-radius: 4px;
+ 
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+
   color: #ffffff;
   background: var(--accent-color);
   cursor: pointer;
 }
 
 /* ------------Особенности----------- */
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features-list {
+  display: flex;
+}
+
+.features-item {
+  margin-right: 30px;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
 .feature-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
   }
 
 .feature-text {
+  min-width: 270px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -121,6 +211,9 @@ body {
 }
 
 /* -------------Чем занимаемся---------- */
+.promo {
+  padding-bottom: 94px;
+}
 .promo-title,
 .team-title {
   font-weight: 700;
@@ -128,13 +221,40 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
- 
+
+  margin-bottom: 50px;
 }
 
+.promo-list {
+  display: flex;
+}
+
+.promo-item {
+  margin-right: 30px;
+}
+
+.promo-item:last-child {
+  margin-right: 0;
+}
 /* --------------Команда----------------- */
 .team {
   background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
  }
+
+ .team-list {
+   display: flex;
+ }
+
+ .team-item {
+   padding-bottom: 30px;
+   margin-right: 30px;
+ }
+
+.team-item:last-child {
+  margin-right: 0;
+}
 
 /* .team-title {
   font-weight: 700;
@@ -145,6 +265,9 @@ body {
   color: var(--primary-color);
 } */
 
+.team-img {
+  margin-bottom: 30px;
+}
 .team-member,
 .team-function {
   font-weight: 500;
@@ -155,6 +278,8 @@ body {
   }
 
 .team-function {
+  margin-top: 10px;
+
   font-weight: 400;
   color: var(--secondary-color);
 }
@@ -162,15 +287,20 @@ body {
 /* --------------Подвал-------------- */
 .footer {
   background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-logo {
+  display: block;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #ffffff;
+
+  margin-bottom: 20px;
 }
 
 .footer-address {
@@ -188,7 +318,37 @@ font-style: normal;
   color: #ffffff;
 }
 
+.footer-contact {
+  display: block;
+  margin-top: 9px;
+}
+
 /* -------------Портфолио--------------- */
+.main-project {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.button-item {
+  margin-right: 8px;
+}
+
+.button-item:last-child {
+  margin-right: 0px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .project-btn {
   font-family: inherit;
   font-weight: 500;
@@ -199,6 +359,8 @@ font-style: normal;
   color: var(--primary-color);
   background-color: #F5F4FA;
   cursor: pointer;
+  border: 0;
+  border-radius: 4px;
 }
 
 .project-btn:hover,
@@ -207,11 +369,22 @@ font-style: normal;
   color: #FFFFFF;
 }
 
+.project-item {
+  padding-bottom: 20px;
+  margin-right: 30px;
+}
+
+.project-item:nth-child(3n) {
+  margin-right: 0;
+}
 .project-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  margin-top: 20px;
+  padding-left: 24px;  
 }
 
 .project-text {
@@ -219,4 +392,7 @@ font-style: normal;
   line-height: 1.9;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
+
+  margin-top: 4px;
+  padding-left: 24px;
 }
