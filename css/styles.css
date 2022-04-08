@@ -380,6 +380,7 @@ font-style: normal;
 }
 
 .project-cont {
+  padding-top: 20px;
   padding-bottom: 20px;
   border: 1px solid #EEEEEE;
   background-color: #fff;
@@ -391,7 +392,6 @@ font-style: normal;
   line-height: 2;
   letter-spacing: 0.06em;
 
-  margin-top: 20px;
   padding-left: 24px;  
 }
 
