@@ -60,6 +60,7 @@ img {
 /* ---------Меню нав---------- */
 .header {
   background-color: #ffffff;
+  border-bottom: 1px solid #ECECEC;
 }
 
 .header-nav{
@@ -370,13 +371,20 @@ font-style: normal;
 }
 
 .project-item {
-  padding-bottom: 20px;
   margin-right: 30px;
-}
+  margin-bottom: 30px;
+  }
 
 .project-item:nth-child(3n) {
   margin-right: 0;
 }
+
+.project-cont {
+  padding-bottom: 20px;
+  border: 1px solid #EEEEEE;
+  background-color: #fff;
+}
+
 .project-title {
   font-weight: 700;
   font-size: 18px;
